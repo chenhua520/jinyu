@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>厦门锦鱼</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+ background: #ffeccc;
+        }
+
+        .body {
+            width: 100%;
+            position: relative;
+        }
+
+        img {
+            margin: 0;
+        }
+
+        .body img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .active {
+            width: 4.4rem;
+            height: 1.6rem;
+            line-height: 1.6rem;
+            position: absolute;
+            right: 0.4rem;
+            top: 0.8rem;
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0.4rem;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .active-time {
+            position: absolute;
+            margin: 0 auto;
+            width: 15rem;
+            background: url('./images/juxing.png') no-repeat;
+            background-size: 100%;
+            height: 2rem;
+            top: 6rem;
+            left: 2.2rem;
+            text-align: center;
+            line-height: 2rem;
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: #5e1201;
+        }
+
+        .jiang {
+            width: 100%;
+            margin-top: -0.3rem;
+        }
+
+        .jiang-kuang {
+            position: relative;
+            margin: 0 auto;
+            background: url('./images/jiangkuang.png') no-repeat;
+            width: 18rem;
+            height: 27rem;
+            background-size: 100%;
+        }
+
+        .jiang-kuang>div {
+            position: absolute;
+        }
+
+        .yaoci {
+
+            width: 5.2rem;
+            height: 4.5rem;
+            left: 2.3rem;
+            top: 1.4rem;
+        }
+        .yaoci-te{
+            width: 7rem;
+            height: 5rem;
+            top: 1.8rem;
+            right:2rem;
+        }
+        .yaoci-te>p{
+            font-size: 1.3rem;
+            color: #83070f;
+            font-weight: 800;
+        }
+        .yaoci-te span{
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+        .tong {
+
+
+        width: 4.3rem;
+         height: 7rem;
+       left: 1.3rem;
+           top: 6rem;
+}
+.first{
+    z-index: 1;
+    color: #a72837;
+    font-size: 0.8rem;
+    font-weight: 800;
+    left: 5.2rem;
+    top: 9rem;
+}
+.first-content{
+    z-index: 1;
+    font-size: 0.7rem;
+    /* font-weight: 550; */
+   
+    left: 8.2rem;
+    top: 8.5rem;
+}
+       .jiang-kuang img {
+            width: 100%;
+            height: 100%;
+        }
+        .bianpao{
+            width: 4.8rem;
+            height: 6rem;
+          right: 1.3rem;
+            top: 10rem;
+        }
+        .second{
+            color: #a72837;
+    font-size: 0.8rem;
+    font-weight: 800;
+    right: 6.2rem;
+    top: 13rem;
+
+            z-index:1;
+        }
+    .second-content{
+        font-size: 0.7rem;
+  
+   text-align: right;
+    left: 4rem;
+    top: 12.5rem;
+
+        z-index:1;
+    }
+    .card{
+        width: 4.2rem;
+            height: 6.5rem;
+            left: 1.3rem;
+            top: 15rem;
+
+    }
+    .third{
+        color: #a72837;
+    font-size: 0.8rem;
+    font-weight: 800;
+    left: 5.2rem;
+    top: 18rem;
+
+        z-index:1;
+    }
+    .third-content{
+        font-size: 0.7rem;
+
+        z-index:1;
+
+   left: 9rem;
+   top: 17.5rem;
+    }
+    .tongqian{
+        width: 5rem;
+            height: 6rem;
+            right: 2rem;
+            top: 20rem;
+    }
+    .lunck-content{
+        font-size: 0.7rem;
+  text-align: right;
+
+  left: 1.3rem;
+  top: 22.5rem;
+
+        z-index:1;
+    }
+    .lunck{
+        color: #a72837;
+    font-size: 0.8rem;
+    font-weight: 800;
+    left: 8.6rem;
+    top: 23rem;
+        z-index:1;
+    }
+
+        .yun-left{
+            width: 2rem;
+            height: 1rem;
+            right: 9rem;
+            top: 9rem;
+            background: url('./images/yun-right.png') no-repeat;
+            background-size: 100%;
+        }
+        .yun-right{
+            width: 2rem;
+            height: 1rem;
+            right: 7.4rem;
+            top: 13rem;
+            background: url('./images/yun-left.png') no-repeat;
+            background-size: 100%;
+        }
+        .left-yun{
+            width: 2rem;
+            height: 1rem;
+            right: 9.3rem;
+            top: 18rem;
+            background: url('./images/yun-right.png') no-repeat;
+            background-size: 100%;
+        }
+        .right-yun{
+            width: 2rem;
+            height: 1rem;
+            right: 8.4rem;
+            top: 23rem;
+            background: url('./images/yun-left.png') no-repeat;
+            background-size: 100%;
+        }
+    .jiantou{
+       position: absolute;
+width: 20rem;
+top: 35.5rem;
+z-index:-1;
+
+
+    }
+    .jiantou img{
+        width: 100%;
+        height: 100%;
+    }
+    .beijing{
+        width: 100%;
+position: absolute;
+top:24rem;
+z-index: -2;
+    }
+    .beijing img{
+        width:100%;
+        height: 100%;
+        
+    }
+    .kaijiang{
+        width:100%;
+        text-align: center;
+        color: #d82323;
+        font-weight: 800;
+    }
+    .qiang{
+        position: absolute;
+        width: 100%;
+        top:27rem;
+        z-index: -3;
+        /* background: url('./images/qiang.png') no-repeat;
+        background-size: 100%; */
+    }
+    .qiang img{
+        width: 100%;
+        height: 100%;
+    }
+    .gu{
+        position: absolute;
+        width: 3rem;
+        height: 6rem;
+        left: 0rem;
+        top:55rem;
+    }
+    .gu img{
+        width: 100%;
+        height: 100%;
+    }
+    .btn{
+     
+        text-align: center;
+        position: absolute;
+        left: 1.7rem;
+        top: 57rem;
+        width: 17rem;
+        height: 2rem;
+        border-radius: 0.7rem;
+        line-height: 2rem;
+        background: #ffe533;
+        color:#9b350d;
+        font-weight: 800;
+
+    }
+   .fang{
+    position: absolute;
+        left: 1.7rem;
+        top: 60rem;
+        width: 17rem;
+   }
+   .fang img{
+       width: 100%;
+       height: 100%;
+   }
+   .dema{
+  width:17rem;
+  background: #444444 url('./images/bankuang.png') no-repeat;
+  background-size: 100%;
+  height: 14rem;
+    
+       position: absolute;
+left: 1.7rem;
+       top: 64.3rem;
+   }
+   .mashang{
+       width: 6rem;
+       height: 1.3rem;
+       background: url('./images/mashang.png') no-repeat;
+       background-size:100%;
+       margin-left: 5.3rem;
+       margin-top: 1rem;
+   }
+.pic img{
+    width: 2.2rem;
+    height: 2.2rem;
+    vertical-align:middle
+}
+.pic span{
+    display: inline-block;
+    width: 4rem;
+    height: 0.1rem;
+    background: black;
+}
+#img-pic{
+    margin-left: 1.2rem;
+}
+.font-content{
+    width: 16rem;
+  
+    height: 6rem;
+}
+ .font-content ul li{
+    list-style: none;
+    float: left;
+    width: 4rem;
+    font-size: 0.5rem;
+    margin-left: 1.2rem;
+    font-weight: 800;
+}
+
+.active-p{
+    font-size: 0.4rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 0.6rem;
+    height: 0.6rem;;
+
+    color: #e93900;
+    margin-left: 0.1rem;
+}
+        .mineone{
+            width: 7rem;
+            height: 1.3rem;
+            background: url('./images/mineone.png') no-repeat;
+            background-size: 100%;
+            margin-top: 1rem;
+        margin-left: 5rem;
+        }
+        .abside{
+            width: 17rem;
+        }
+        .abside li{
+            margin-top: -0.2rem;
+            list-style: none;
+            height: 2.5rem;
+            background: url('./images/abside.png') no-repeat;
+            background-size: 100%;
+            width: 17rem;
+        }
+        .abside li div{
+            float: left;
+        }
+        .touxiang{
+            width: 2rem;
+            height: 2rem;
+            background: red ;
+            border-radius: 50%;
+            margin-left: 1.4rem;
+        }
+        .clearix{
+            clear: both;
+        }
+        .xinxi{
+            margin-left: 0.3rem;
+            height: 2rem;
+            line-height: 1rem;
+        }
+        .xinxi p{
+            font-size: 0.6rem;
+
+        }
+        .shuxian{
+            height: 2rem;
+            width: 0.1rem;
+            height: 1rem;
+            background: black;
+            line-height: 2rem;
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+        .number{
+            margin-left: 1rem;
+            margin-top: 0.4rem;
+            color: #e93900;
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+        .bottom{
+            margin-top: -0.1rem;
+            width: 17rem;
+            height: 2rem;
+            background: url('./images/bottom.png') no-repeat;
+            background-size: 100%;
+        }
+        .touxiang img{
+            width:100%;
+            height: 100%;
+            border-radius:50%; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <img src="./images/body.png" alt="">
+        <div class="active">活动规则</div>
+        <div class="active-time">
+            活动时间 2019年8月1日-8月11日
+        </div>
+    </div>
+    <div class="jiang">
+        <div class="jiang-kuang">
+            <div class="yaoci">
+                <img src="./images/o.png" alt="">
+            </div>
+            <div class="yaoci-te">
+                <p>特等奖</p>
+                <span>建行金药匙10g<br>AU199(1份)</span>
+            </div>
+            <div class="tong">
+                <img src="./images/tong.png" alt="">
+            </div>
+            <div class="first">一等奖</div>
+            <div class="first-content"><span>建行龙钱5g<br>AU199(5份)</span></div>
+            <div class="bianpao">
+                <img src="./images/bianpao.png" alt="">
+            </div>
+            <div class="second">二等奖</div>
+            <div class="second-content"><span>建行金砂<br>AU199(22份)</span></div>
+            <div class="card">
+                <img src="./images/xinyongka.png" alt="">
+            </div>
+            <div class="third">三等奖</div>
+            <div class="third-content"><span>50元话费充值卡<br>(50份)</span></div>
+            <div class="tongqian">
+                <img src="./images/tongqian.png" alt="">
+            </div>
+            <div class="lunck-content"><span>人民银行5元纪念币<br>(160份)</span></div>
+            <div class="lunck">幸运奖</div>
+            <div class="yun-left"></div>
+            <div class="yun-right"></div>
+            <div class="left-yun"></div>
+            <div class="right-yun"></div>
+        </div>
+    </div>
+    <div class="beijing"><img src="./images/beijing.png" alt=""></div>
+    <div class="jiantou">
+     <img src="./images/jiantou.png" alt="">
+    </div>
+    <div class="kaijiang">2019年8月12日&nbsp;15：01开奖</div>
+    <div class="qiang">
+       <img src="./images/qiang.png" alt="">
+    </div>
+    <div class="gu">
+        <img src="./images/gu.png" alt="">
+    </div>
+    <div class="btn">立即参与</div>
+    <div class="fang">
+        <img src="./images/fang.png" alt="">
+    </div>
+<div class="dema">
+<div class="mashang"></div>
+<div class="pic">
+    <img id=img-pic src="./images/tuoyuan.png" alt=""><span></span><img src="./images/fenxiang.png" alt=""><span></span><img src="./images/kafei.png" alt="">
+</div>
+<div class="font-content">
+    <ul>
+        <li>①关注“厦门建行悦理财”公众号，参与锦鱼活动立得1组幸运码</li>
+        <li>②邀请2位好友参与锦鱼活动，再获得1组幸运码(每位客户最多获得2组幸运码)</li>
+        <li>③开奖后获奖会员领取对应档位奖品</li>
+    </ul>
+</div>
+<div class="clearix"></div>
+    <div class="active-p">活动截止：2019年8月12日15：00(15:01开奖)</div>
+    <div class="mineone"></div>
+<ul class="abside">
+    <li>
+        <div class="touxiang"><img src="./images/avatar.jpg" alt=""></div>
+        <div class="xinxi">
+            <p>自己参与</p>
+            <p>2019.8.1 18：58</p>
+        </div>
+        <div class="shuxian"></div>
+        <div class="number">23645846</div>
+        <div class="clearix"></div>
+    </li>
+
+    <li>
+        <div class="touxiang"><img src="./images/avatar.jpg" alt=""></div>
+        <div class="xinxi">
+            <p>邀请好友</p>
+            <p>2019.8.1 18：58</p>
+        </div>
+        <div class="shuxian"></div>
+        <div class="number">15467676</div>
+        <div class="clearix"></div>
+    </li>
+    <li>
+        <div class="touxiang"><img src="./images/avatar.jpg" alt=""></div>
+        <div class="xinxi">
+            <p>自己参与</p>
+            <p>2019.8.1 18：58</p>
+        </div>
+        <div class="shuxian"></div>
+        <div class="number">15467676</div>
+        <div class="clearix"></div>
+    </li>
+
+
+</ul>
+    <div class="bottom"></div>
+</div>
+
+
+    <script>
+
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px';
+         </script>
+</body>
+
+</html>
